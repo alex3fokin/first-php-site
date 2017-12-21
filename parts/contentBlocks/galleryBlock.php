@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="container gal-container">
-                <?php foreach ($data as $i => $photo): ?>
+                <?php
+                $i = 0;
+                 foreach ($data as $photo): ?>
                     <div class="col-md<?php if ($i === 0 || $i % 9 === 0) echo '-8';
                 else echo '-4' ?> col-sm<?php if ($i === 0 || $i % 9 === 0) echo '-12';
                 else echo '-6' ?> col-xs-12 gal-item">
@@ -25,7 +27,9 @@
                             </div>
                         </div>
                     </div>
-<?php endforeach; ?>  
+<?php
+	$i++;
+ endforeach; ?>  
             </div>
         </div>
     </div>
