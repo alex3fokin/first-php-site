@@ -32,7 +32,7 @@ if (filter_input(INPUT_POST, 'createNewPage')) {
     header("Location: " . $_SERVER['PHP_SELF'] . "");
     exit;
 }
-if(filter_input(INPUT_POST, 'deleteUser')) {
+if(isset($_POST['deleteUser'])) {
     unset($users[filter_input(INPUT_POST, 'deleteUser')]);
     file_put_contents($usersFile, serialize($users));
 }
